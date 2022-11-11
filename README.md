@@ -30,7 +30,7 @@ Output:
 ```
 import npe
 text = "The quick brown foxes jumped over the lazy dogs. This is a second sentence with the phrase Azure Cognitive Search. "
-noun_phrase_by_passage(text)
+npe.noun_phrase_by_passage(text)
 ```
 
 Output:
