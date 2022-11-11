@@ -5,7 +5,7 @@ These words and phrases are lemmatized and any stop words are removed.
 
 It is based primarily on Spacy and NLTK libraries.
 
-## Extract Noun Phrase split by Sentences
+## Extract Noun Phrase split by Sentence
 ```
 import npe
 text = "The quick brown foxes jumped over the lazy dogs. This is a second sentence with the phrase Azure Cognitive Search. "
