@@ -3,15 +3,22 @@
 ```
 import npe
 text = """
-The quick brown fox jumped over the lazy dog. This is a second sentence.
+The quick brown fox jumped over the lazy dog. This is a second sentence with the phrase Azure Cognitive Search.
 """
-npe.extract_noun_phrases(text)
+npe.noun_phrase_by_sentence(text)
 ```
 
 Output:
 
 ```
-[['lazy', 'fox', 'jumped', 'brown_fox', 'quick', 'dog', 'brown'],
- ['sentence', 'second']]```
+[['quick_brown_fox', 'brown', 'lazy', 'fox', 'lazy_dog', 'dog', 'quick'],
+ ['second',
+  'phrase',
+  'sentence',
+  'azure_cognitive_search',
+  'second_sentence',
+  'azure',
+  'cognitive',
+  'search']]
 ```
 
