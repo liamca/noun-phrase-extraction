@@ -1,6 +1,6 @@
 # Noun Phrase Extraction of Text (Key Phrase Extraction)
 
-This code will extract all of the single word nouns and attempt to append potential noun phrases.
+This code will extract all of the single word nouns along with any noun phrases that can be found. It is based primarily on Spacy and NLTK libraries.
 
 ## Extract Noun Phrase split by Sentences
 ```
