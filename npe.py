@@ -49,3 +49,42 @@ def noun_phrase_by_sentence(text):
             np_list.append(list(set(np_sentence_list)))
             # print('np_sentence_list', np_sentence_list)
     return np_list
+
+
+def noun_phrase_by_passage(text):
+    tokenized_content = []
+
+    passages = []
+    for p in text.split('\n'):
+        for pp in p.split('     '):
+            if len(pp.strip()) > 0:
+                passages.append(pp.strip())
+
+
+    np_list = []
+    for passage in passages:
+        np_passage_list = []
+        doc = nlp(passage)
+        for noun_chunk in doc.noun_chunks:
+            sent_stop = [i for i in word_tokenize(noun_chunk.text.lower()) if i not in stop]
+            # print ('sent_stop', sent_stop)
+            cleaned_sent_stop = []
+            for ss in sent_stop:
+                if len(ss) >= min_term_len and any(c.isalpha() for c in ss):
+                    cleaned_sent_stop.append(ss)
+
+            # print ('cleaned_sent_stop', cleaned_sent_stop)
+            lemmatized = []
+            if len(cleaned_sent_stop) > 0:
+                lemmatized=[lemmatizer.lemmatize(word) for word in cleaned_sent_stop]
+
+            if len(lemmatized) > 0:
+                # print ('lemmatized', lemmatized)
+                for n in lemmatized:
+                    np_passage_list.append(n)
+                np_passage_list.append("_".join(lemmatized))
+
+        if len(np_passage_list) > 0:
+            np_list.append(list(set(np_passage_list)))
+            # print('np_passage_list', np_passage_list)
+    return np_list
