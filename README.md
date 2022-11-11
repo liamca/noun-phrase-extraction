@@ -1,1 +1,1 @@
-# Noun Phrase Extraction of text (Key Phrase Extraction)
+# Noun Phrase Extraction of Text (Key Phrase Extraction)
