@@ -37,19 +37,19 @@ Output:
 
 ```
 [['second',
-  'phrase',
   'quick_brown_fox',
-  'brown',
-  'sentence',
-  'azure_cognitive_search',
-  'lazy',
-  'fox',
   'lazy_dog',
+  'lazy',
   'second_sentence',
-  'search',
+  'azure_cognitive_search',
+  'sentence',
   'dog',
+  'brown',
+  'quick',
   'azure',
   'cognitive',
-  'quick']]
+  'fox',
+  'search',
+  'phrase']]
 ```
 
